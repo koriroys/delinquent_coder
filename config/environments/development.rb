@@ -34,4 +34,10 @@ DelinquentCoder::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Github ENV variables
+  # If your app is blowing up here, make an env_vars.rb file with:
+  # ENV['GITHUB_KEY'] = '___'
+  # ENV['GITHUB_SECRET'] = '___'
+  require "#{File.dirname(__FILE__)}/env_vars.rb"
 end

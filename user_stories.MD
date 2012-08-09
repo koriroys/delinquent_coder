@@ -38,3 +38,8 @@ I can accept or reject the request
 As an admin
 When I am authenticated
 I can create new content
+
+
+Hidden file
+
+Create an unlimited plan in crew

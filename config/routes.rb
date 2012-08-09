@@ -2,6 +2,9 @@ DelinquentCoder::Application.routes.draw do
   root to: "static_pages#index"
   get "home" => "static_pages#index", as: :home
 
+  get '/auth/github', as: :github_auth
+  match '/auth/github/callback', to: 'sessions#create'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
