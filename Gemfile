@@ -1,17 +1,21 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.7'
-gem 'jquery-rails'
-gem 'debugger'
-gem 'haml-rails'
+gem 'jquery-rails', '~> 2.0.2'
+gem 'debugger', '~> 1.2.0'
+gem 'haml-rails', '~> 0.3.4'
+gem 'omniauth-github', '~> 1.0.1'
+
+gem 'thin', '~> 1.4.1'
+gem 'foreman', '~> 0.51.0'
 
 group :development, :test do
-  gem 'sqlite3'
-  gem 'rspec-rails'
+  gem 'sqlite3', '1.3.6'
+  gem 'rspec-rails', '2.11.0'
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg', '0.14.0'
 end
 
 group :assets do
