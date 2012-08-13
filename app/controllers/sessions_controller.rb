@@ -1,6 +1,14 @@
 class SessionsController < ApplicationController
   def create
     session[:github] = request.env['omniauth.auth']
-    render json: session[:github]
+    flash[:notice] = 'Success! You are now logged in with github.'
+    redirect_to home_path
+    #render json: session[:github]
+  end
+
+  def destroy
+    reset_session
+    flash[:notice] = 'You are now logged out.'
+    redirect_to home_path
   end
 end

@@ -1,14 +1,14 @@
 # user stories
 
-As a user
-I can signup with github
-And I receive a welcome email
+-As a user
+-I can signup with github
+-And I receive a welcome email
 
-As a user
-I can authenticate with my github account
+-As a user
+-I can authenticate with my github account
 
-As a user not using github
-I suck at life and can't signup
+-As a user not using github
+-I suck at life and can't signup
 
 As a first time user
 After authenticating

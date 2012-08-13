@@ -4,6 +4,7 @@ DelinquentCoder::Application.routes.draw do
 
   get '/auth/github', as: :github_auth
   match '/auth/github/callback', to: 'sessions#create'
+  get '/logout' => 'sessions#destroy', as: :github_logout
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

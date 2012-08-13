@@ -12,6 +12,7 @@ gem 'foreman', '~> 0.51.0'
 group :development, :test do
   gem 'sqlite3', '1.3.6'
   gem 'rspec-rails', '2.11.0'
+  gem 'capybara', '~> 1.1.2'
 end
 
 group :production do

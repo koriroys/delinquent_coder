@@ -40,4 +40,6 @@ DelinquentCoder::Application.configure do
   # ENV['GITHUB_KEY'] = '___'
   # ENV['GITHUB_SECRET'] = '___'
   require "#{File.dirname(__FILE__)}/env_vars.rb"
+
+  OmniAuth.config.test_mode = true
 end

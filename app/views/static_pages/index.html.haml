@@ -1,3 +1,11 @@
-%p One day this page might not suck so much. We shall see.
+= flash[:notice] if flash[:notice]
 
-= link_to "Login with Github", github_auth_path
+%p Welcome to Delinquent Coder. Go ahead. Snoop around.
+
+%p
+  - if session[:github]
+    %p
+      = link_to "Logout", github_logout_path
+    = session[:github].as_json if session[:github]
+  - else
+    = link_to "Login with Github", github_auth_path
