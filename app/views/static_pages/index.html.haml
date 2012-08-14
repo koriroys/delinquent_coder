@@ -1,11 +1,17 @@
-= flash[:notice] if flash[:notice]
+#flash
+  = flash[:notice] if flash[:notice]
 
-%p Welcome to Delinquent Coder. Go ahead. Snoop around.
+#banner
+  %p Welcome to Delinquent Coder. Go ahead. Snoop around.
 
-%p
-  - if session[:github]
-    %p
-      = link_to "Logout", github_logout_path
-    = session[:github].as_json if session[:github]
-  - else
-    = link_to "Login with Github", github_auth_path
+#login
+  %p
+    - if session[:github]
+      %p
+        = link_to "Logout", github_logout_path
+    - else
+      = link_to "Login with Github", github_auth_path
+#main
+  %p 
+    - if session[:github] # logged in, fix this later
+      = session[:github].as_json if session[:github]
