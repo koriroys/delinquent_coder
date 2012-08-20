@@ -12,7 +12,7 @@ describe "github authorization" do
   describe "logging in" do
     specify "succeeds" do
       click_link 'Login with Github'
-      expect(page).to have_content('Success! You are now logged in with github.')
+      expect(page).to have_content('Success! You are now logged in with github, Bob Example.')
     end
   end
 
