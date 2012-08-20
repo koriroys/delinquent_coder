@@ -1,5 +1,6 @@
-#flash
-  = flash[:notice] if flash[:notice]
+- if flash[:notice]
+  #flash
+    = flash[:notice]
 
 #banner
   %p Welcome to Delinquent Coder. Go ahead. Snoop around.
@@ -12,6 +13,7 @@
     - else
       = link_to "Login with Github", github_auth_path
 #main
-  %p 
+  %p
     - if session[:github] # logged in, fix this later
-      = session[:github].as_json if session[:github]
+      -#= session[:github].as_json if session[:github]
+      = render 'repos/new_documents_repo'

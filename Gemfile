@@ -17,6 +17,7 @@ end
 
 group :production do
   gem 'pg', '0.14.0'
+  gem 'newrelic_rpm'
 end
 
 group :assets do
